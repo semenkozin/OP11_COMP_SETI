@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Форма регистрации</title>
+</head>
+<body>
+
+<h3>Форма регистрации</h3>
+
+<form name="registration">
+<br>
+Имя
+<input type="text" name="name"><br><br>
+<br>
+e-mail
+<input type="email" name="email"><br><br>
+<br>
+Пароль
+<input type="password" name="password"><br><br>
+<br>
+Повтор пароля
+<input type="password" name="m_password"><br><br>
+<br>
+
+Пол
+<input type="radio" name="gender" value="male"> мужской
+<input type="radio" name="gender" value="female"> женский<br><br>
+<br>
+Увлечения:
+<br>
+<select name="hobby" size="7" multiple>
+<option value="computers">компьютеры</option>
+<option value="sport">спорт</option>
+<option value="games">игры</option>
+<option value="animals">животные</option>
+<option value="cars">автомобили</option>
+<option value="clubs">клубы</option>
+<option value="music">музыка</option>
+</select><br><br>
+
+Ваши пожелания:<br>
+<textarea name="wishes" rows="4" cols="40"></textarea><br><br>
+
+<input type="submit" value="Отправить">
+<input type="reset" value="Очистить">
+</form>
+
+</body>
+</html>
