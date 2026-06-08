@@ -5,27 +5,16 @@
     <title>Случайный фон</title>
 </head>
 <body>
-
     <button id="colorBtn">
         Случайный фон
     </button>
-
     <script>
-        let button =
-            document.querySelector("#colorBtn");
-
+        let button = document.querySelector("#colorBtn");
         button.onclick = function() {
-            let r =
-                Math.floor(Math.random() * 256);
-
-            let g =
-                Math.floor(Math.random() * 256);
-
-            let b =
-                Math.floor(Math.random() * 256);
-
-            document.body.style.backgroundColor =
-                "rgb(" + r + "," + g + "," + b + ")";
+            let r = Math.floor(Math.random() * 256);
+            let g = Math.floor(Math.random() * 256);
+            let b = Math.floor(Math.random() * 256);
+            document.body.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
         };
     </script>
 
