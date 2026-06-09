@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 1 - Чётное или нечётное</title>
+</head>
+<body>
+    <h2>Проверка числа</h2>
+    <input type="number" id="numberInput" placeholder="Введите число">
+    <button id="checkBtn">Проверить</button>
+    <p id="result"></p>
+
+    <script>
+        let button = document.querySelector("#checkBtn");
+        let input = document.querySelector("#numberInput");
+        let output = document.querySelector("#result");
+
+        button.onclick = function() {
+            let number = input.value;
+            
+            if (number === "") {
+                output.textContent = "Введите число";
+            } else {
+                let num = Number(number);
+                if (num % 2 === 0) {
+                    output.textContent = "Чётное";
+                } else {
+                    output.textContent = "Нечётное";
+                }
+            }
+        };
+    </script>
+</body>
+</html>

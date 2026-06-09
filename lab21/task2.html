@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 2 - Калькулятор скидки</title>
+</head>
+<body>
+    <h2>Калькулятор скидки</h2>
+    <input type="number" id="price" placeholder="Стоимость товара">
+    <input type="number" id="age" placeholder="Возраст покупателя">
+    <button id="calculateBtn">Рассчитать</button>
+    <p id="result"></p>
+
+    <script>
+        let priceInput = document.querySelector("#price");
+        let ageInput = document.querySelector("#age");
+        let calculateBtn = document.querySelector("#calculateBtn");
+        let resultP = document.querySelector("#result");
+        function calculateDiscount(price, age) {
+            let discount = 0;
+           
+            if (age < 18) {
+                discount = 10;
+            } else if (age >= 60) {
+                discount = 20;
+            } else {
+                discount = 0;
+            }
+            
+            let finalPrice = price - (price * discount / 100);
+            return finalPrice;
+        }
+
+        calculateBtn.onclick = function() {
+            let price = Number(priceInput.value);
+            let age = Number(ageInput.value);
+            
+            if (priceInput.value === "" || ageInput.value === "") {
+                resultP.textContent = "Ошибка: заполните все поля";
+            } else if (price <= 0 || age <= 0) {
+                resultP.textContent = "Ошибка: введите корректные значения";
+            } else {
+                let finalPrice = calculateDiscount(price, age);
+                resultP.textContent = "Итоговая цена: " + finalPrice + " рублей";
+            }
+        };
+    </script>
+</body>
+</html>

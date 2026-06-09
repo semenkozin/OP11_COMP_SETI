@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 3 - Проверка номера телефона</title>
+</head>
+<body>
+    <h2>Проверка номера телефона</h2>
+    <input type="tel" id="phone" placeholder="Введите номер телефона">
+    <button id="checkBtn">Проверить номер</button>
+    <p id="result"></p>
+
+    <script>
+        let checkBtn = document.querySelector("#checkBtn");
+        let phoneInput = document.querySelector("#phone");
+        let resultP = document.querySelector("#result");
+
+        checkBtn.onclick = function() {
+            let phone = phoneInput.value;
+            
+            if (phone === "") {
+                resultP.textContent = "Номер не может быть пустым";
+                resultP.style.color = "red";
+                return;
+            }
+            
+            let cleanedNumber = phone;
+            if (cleanedNumber[0] === "+") {
+                cleanedNumber = cleanedNumber.slice(1);
+            }
+            
+            let hasNonDigit = false;
+            for (let i = 0; i < cleanedNumber.length; i++) {
+                if (cleanedNumber[i] < "0" || cleanedNumber[i] > "9") {
+                    hasNonDigit = true;
+                }
+            }
+            
+            if (hasNonDigit) {
+                resultP.textContent = "Номер содержит недопустимые символы";
+                resultP.style.color = "red";
+            } else if (cleanedNumber.length === 10 || cleanedNumber.length === 11) {
+                resultP.textContent = "Номер телефона верный";
+                resultP.style.color = "green";
+            } else {
+                resultP.textContent = "Неверный формат номера";
+                resultP.style.color = "red";
+            }
+        };
+    </script>
+</body>
+</html>
