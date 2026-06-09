@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 1 - Список книг</title>
+</head>
+<body>
+    <h2>Мои любимые книги</h2>
+    <ol id="bookList"></ol>
+
+    <script>
+        let книги = ["Название книги 1", "Название книги 2", "Название книги 3", "Название книги 4", "Название книги 5"];
+        let список = document.querySelector("#bookList");
+        
+        if (книги.length === 0) {
+            список.innerHTML = "Список пуст";
+        } else {
+            for (let i = 0; i < книги.length; i++) {
+                список.innerHTML = список.innerHTML + "<li>" + книги[i] + "</li>";
+            }
+        }
+    </script>
+</body>
+</html>

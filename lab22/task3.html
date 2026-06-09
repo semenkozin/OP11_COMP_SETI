@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 3 - Счётчик элементов</title>
+</head>
+<body>
+    <h2>Счётчик элементов</h2>
+    <button id="countBtn">Подсчитать</button>
+    <p id="moreThan10"></p>
+    <p id="lessThan10"></p>
+    <p id="equal10"></p>
+    <p id="sum"></p>
+
+    <script>
+        let числа = [5, 12, 8, 130, 44, 3, 7, 21];
+        let countBtn = document.querySelector("#countBtn");
+        let moreP = document.querySelector("#moreThan10");
+        let lessP = document.querySelector("#lessThan10");
+        let equalP = document.querySelector("#equal10");
+        let sumP = document.querySelector("#sum");
+        
+        countBtn.onclick = function() {
+            let больше = 0;
+            let меньше = 0;
+            let равно = 0;
+            let сумма = 0;
+            
+            for (let i = 0; i < числа.length; i++) {
+                сумма = сумма + числа[i];
+                
+                if (числа[i] > 10) {
+                    больше++;
+                } else if (числа[i] < 10) {
+                    меньше++;
+                } else {
+                    равно++;
+                }
+            }
+            
+            moreP.textContent = "Чисел больше 10: " + больше;
+            lessP.textContent = "Чисел меньше 10: " + меньше;
+            equalP.textContent = "Чисел равных 10: " + равно;
+            sumP.textContent = "Сумма всех элементов: " + сумма;
+        };
+    </script>
+</body>
+</html>
