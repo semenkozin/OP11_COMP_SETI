@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>Таблица</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px 16px;
+            text-align: center;
+        }
+        /* Годы (шапка) - марун */
+        th {
+            background-color: maroon;
+            color: white;
+        }
+        /* Все ячейки с данными и названиями камней - светло-желтые */
+        td {
+            background-color: #ffffad;
+            color: black;
+        }
+        /* Названия камней выравниваем влево */
+        td:first-child {
+            text-align: left;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<table>
+    <thead>
+        <tr>
+            <th></th>
+            <th>2004</th>
+            <th>2005</th>
+            <th>2006</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Рубины</td>
+            <td>43</td>
+            <td>51</td>
+            <td>79</td>
+        </tr>
+        <tr>
+            <td>Изумруды</td>
+            <td>28</td>
+            <td>34</td>
+            <td>48</td>
+        </tr>
+        <tr>
+            <td>Сапфиры</td>
+            <td>29</td>
+            <td>57</td>
+            <td>36</td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

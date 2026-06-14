@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 12 - nth-child</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+            font-size: 14px;
+            width: 70%;
+        }
+        th, td {
+            padding: 8px 12px;
+            text-align: left;
+        }
+        th {
+            color: #fff;
+            background-color: #2a58ea;
+            border-bottom: 2px solid #6678b1;
+        }
+        td {
+            color: #669;
+            border-bottom: 1px solid #0be052;
+        }
+        tr:nth-child(even) td {
+            background-color: #e8edff;
+        }
+        tr:nth-child(odd) td {
+            background-color: #b9c6f7;
+        }
+        tr:hover td {
+            color: #ea2a36;
+        }
+    </style>
+</head>
+<body>
+
+<table>
+    <thead>
+        <tr>
+            <th>Employee</th>
+            <th>Salary</th>
+            <th>Bonus</th>
+            <th>Supervisor</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Stephen C. Cox</td>
+            <td>$300</td>
+            <td>$50</td>
+            <td>Bob</td>
+        </tr>
+        <tr>
+            <td>Josephin Tan</td>
+            <td>$150</td>
+            <td>-</td>
+            <td>Annie</td>
+        </tr>
+        <tr>
+            <td>Joyce Ming</td>
+            <td>$200</td>
+            <td>$35</td>
+            <td>Andy</td>
+        </tr>
+        <tr>
+            <td>James A. Pentel</td>
+            <td>$175</td>
+            <td>$25</td>
+            <td>Annie</td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
